@@ -65,14 +65,14 @@ $(function() {
    $("[data-collapse]").ready(function(){
     
 
-    $(".accordion_item").eq(2).addClass("active");
-    $(".accordion_content").eq(2).show();
+    $(".accordion .accordion_item:first").eq(2).addClass("active");
+    $(".accordion .accordion_content:not(:first)").eq(2).show();
 
-    $(".accordion_heaader").click(function(){
-        $(this).next("p").slideToggle("slow")
-        .siblings("p:visible").slideUp("slow");
+    $(".accordion .accordion_heaader").click(function(){
+        $(this).next(".accordion_content").slideToggle("slow")
+        .siblings(".accordion_content:visible").slideUp("slow");
         $(this).toggleClass("active");
-        $(this).siblings("h3").removeClass("active");
+        $(this).siblings(".accordion_heaader").removeClass("active");
     });
 
 });
