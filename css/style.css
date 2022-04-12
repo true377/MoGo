@@ -547,7 +547,7 @@ hr {
 .accordion_heaader:after{
     transform: translateY(-50%) rotate(-45deg);
     margin-top: 5px;
-    transition: all .5s;
+    transition: transform 0.5s linear;
 }
 .accordion_heaader:after {
     content: '';
@@ -561,7 +561,7 @@ hr {
     right: 20px;
     z-index: 1;
     transform: translateY(-50%) rotate(135deg);
-    transition: all .5s;
+    transition: transform 0.5s linear;
 }
 .accordion_content {
     display: none;
