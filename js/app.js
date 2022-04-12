@@ -62,7 +62,7 @@ $(function() {
    
        
        
-   $("[data-collapse]").ready(function(){
+   $(".accordion").ready(function(){
     
 
       $(".accordion .accordion_item:first").addClass("active");   //(1)
@@ -71,7 +71,7 @@ $(function() {
     $(".accordion .accordion_heaader").click(function(){   //(3)
 
         $(this).next(".accordion_content").slideToggle("slow")   //(4)
-        .siblings(".accordion_content:visible").slideUp("slow");   
+        .siblings(".accordion_content").slideUp("slow");   
         $(this).toggleClass("active");   //(5)
         $(this).siblings(".accordion_item").removeClass("active");   //(6)
      });
