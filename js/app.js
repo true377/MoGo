@@ -66,7 +66,7 @@ $(function() {
     
 
       $(".accordion .accordion_item:first").addClass("active");   //(1)
-    $(".accordion .accordion_item:not(:first)").hide();   //(2)
+    $(".accordion .accordion_content:not(:first)").hide();   //(2)
 
     $(".accordion .accordion_heaader").click(function(){   //(3)
 
