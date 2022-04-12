@@ -59,24 +59,14 @@ $(function() {
 
 
     // Collapse
-   
-       
-       
-   $(".accordion").ready(function(){
-    
+    $("[data-collapse]").on("click", function(event) {
+        var $this = $(this),
+            blockId = $this.data('collapse');
 
-      $(".accordion .accordion_item:first").addClass("active");   //(1)
-    $(".accordion .accordion_content:not(:first)").hide();   //(2)
-
-    $(".accordion .accordion_heaader").click(function(){   //(3)
-
-        $(this).next(".accordion_content").slideToggle("slow")   //(4)
-        .siblings(".accordion_content").slideUp("slow");   
-        $(this).toggleClass("active");   //(5)
-        $(this).siblings(".accordion_item").removeClass("active");   //(6)
-     });
-
- });
+        $this.toggleClass("active");
+        $(this).siblings("[data-collapse]").removeClass("active");
+        
+    });
 
 
 
