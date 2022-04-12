@@ -62,20 +62,21 @@ $(function() {
    
        
        
-   $("[data-collapse]").ready(function(){
+   $(".accordion").ready(function(){
     
 
-    $(".accordion .accordion_item:first").eq(2).addClass("active");
-    $(".accordion .accordion_content:not(:first)").eq(2).show();
+      $(".accordion .accordion_item:first").addClass("active");   //(1)
+    $(".accordion .accordion_item:not(:first)").hide();   //(2)
 
-    $(".accordion .accordion_heaader").click(function(){
-        $(this).next(".accordion_content").slideToggle("slow")
-        .siblings(".accordion_content:visible").slideUp("slow");
-        $(this).toggleClass("active");
-        $(this).siblings(".accordion_heaader").removeClass("active");
-    });
+    $(".accordion .accordion_heaader").click(function(){   //(3)
 
-});
+        $(this).next(".accordion_content").slideToggle("slow")   //(4)
+        .siblings(".accordion_content:visible").slideUp("slow");   
+        $(this).toggleClass("active");   //(5)
+        $(this).siblings(".accordion_heaader").removeClass("active");   //(6)
+     });
+
+ });
 
 
 
