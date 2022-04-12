@@ -524,26 +524,30 @@ hr {
 .accordion_item {
     border: 1px solid #e5e5e5;
     margin-bottom: 10px;
+    
 }
 .accordion_item.active
 .accordion_content {
     display: block;
+    
 }
 .accordion_heaader {
     padding: 15px 20px 15px 65px;
     position: relative;
     border-bottom: 1px solid transparent;
     cursor: pointer;
+    
 }
 .accordion_item.active
 .accordion_heaader {
     border-bottom-color: #e5e5e5;
+    
 }
 .accordion_item.active
 .accordion_heaader:after{
     transform: translateY(-50%) rotate(-45deg);
     margin-top: 5px;
-
+    transition: all .5s;
 }
 .accordion_heaader:after {
     content: '';
@@ -557,6 +561,7 @@ hr {
     right: 20px;
     z-index: 1;
     transform: translateY(-50%) rotate(135deg);
+    transition: all .5s;
 }
 .accordion_content {
     display: none;
@@ -565,6 +570,7 @@ hr {
     color: #999;
     font-style: italic;
     font-weight: 300;
+    
 }
 .accordion_icon {
     position: absolute;
